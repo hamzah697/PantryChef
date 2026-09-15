@@ -2,12 +2,12 @@ import {useState} from 'react'
 import '../global.css';
 import { useEffect } from 'react';
 import { useRef } from 'react';
-
-
+import { Menu } from 'lucide-react';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
  const dropdownRef= useRef(null)
+ const [menuOpen, setMenuOpen] = useState(false);
 
  useEffect(()=>{
            document.addEventListener("click",(event)=>{
@@ -30,7 +30,7 @@ const Navbar = () => {
         </a>
 
         
-        <div className="nav-links">
+        <div className={`nav-links ${menuOpen ? "mobile-open" : ""}`}>
           <ul>
             <li>
               <a href="#">Home</a>
@@ -93,7 +93,11 @@ const Navbar = () => {
             <span>✦</span>
           </button>
         </div>
-
+                <button 
+  className={`menu-toggle ${menuOpen ? "active" : ""}`}
+  onClick={() => setMenuOpen(!menuOpen)}
+  aria-label="Toggle navigation menu"
+       ><Menu /></button>
       </div>
     </nav>
   );
