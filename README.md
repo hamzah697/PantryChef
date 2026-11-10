@@ -1,5 +1,10 @@
 # 🍳 PantryChef
 
+<p align="center">
+  <img src="pantrychef-preview.PNG" alt="PantryChef landing page preview" width="100%" />
+</p>
+
+
 **Turn the ingredients in your kitchen into delicious meal ideas.**
 
 PantryChef is a recipe discovery application that helps users find recipes based on ingredients they already have. Instead of wondering what to cook, simply enter your available ingredients and discover meals you can prepare.
